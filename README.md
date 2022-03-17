@@ -1,6 +1,7 @@
 Tasklar
+
 - Hakan -> Typography
-- Aydoğan -> Checkbox
+- Aydoğan -> ListItem
 - Baran -> Button
 - Burak -> Drag/Drop component
 - Yasin -> Textarea
