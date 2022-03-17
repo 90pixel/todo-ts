@@ -4,7 +4,7 @@ import { styled } from 'stitches.config';
 const Home: NextPage = () => {
   return (
     <div>
-      <CustomButton>button</CustomButton>
+      <CustomButton>butt on</CustomButton>
     </div>
   );
 };
