@@ -1,4 +1,4 @@
-import { globalCss } from 'stitches.config';
+import { globalCss, keyframes } from 'stitches.config';
 
 export const globalStyles = globalCss({
   '*': {
@@ -27,5 +27,17 @@ export const globalStyles = globalCss({
     '&:hover': {
       color: '#fff',
     },
+  },
+});
+
+export const shrinkBounce = keyframes({
+  '0%': {
+    transform: 'scale(1)',
+  },
+  '33%': {
+    transform: 'scale(.85)',
+  },
+  '100%': {
+    transform: 'scale(1)',
   },
 });
