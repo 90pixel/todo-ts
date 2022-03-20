@@ -1,10 +1,12 @@
 import type { NextPage } from 'next';
 import { styled } from 'stitches.config';
+import { DndComponent } from 'components';
 
 const Home: NextPage = () => {
   return (
     <div>
       <CustomButton>butt on</CustomButton>
+      <DndComponent />
     </div>
   );
 };
