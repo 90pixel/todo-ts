@@ -25,9 +25,14 @@ interface SortableDataProps {
 interface DndComponentProps {
   data: SortableDataProps[];
   onDragEnd?: (updatedData: SortableDataProps[]) => void;
+  customDragIcon?: React.ReactNode;
 }
 
-const DndComponent: FC<DndComponentProps> = ({ data, onDragEnd }) => {
+const DndComponent: FC<DndComponentProps> = ({
+  data,
+  onDragEnd,
+  customDragIcon,
+}) => {
   const [items, setItems] = useState(data);
 
   const sensors = useSensors(
@@ -62,7 +67,11 @@ const DndComponent: FC<DndComponentProps> = ({ data, onDragEnd }) => {
     >
       <SortableContext items={items} strategy={verticalListSortingStrategy}>
         {items.map((item) => (
-          <SortableItem key={item.id} id={item.id}>
+          <SortableItem
+            key={item.id}
+            id={item.id}
+            customDragIcon={customDragIcon}
+          >
             {item.item}
           </SortableItem>
         ))}
