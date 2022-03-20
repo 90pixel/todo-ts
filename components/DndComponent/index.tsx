@@ -24,9 +24,10 @@ interface SortableDataProps {
 
 interface DndComponentProps {
   data: SortableDataProps[];
+  onDragEnd?: (updatedData: SortableDataProps[]) => void;
 }
 
-const DndComponent: FC<DndComponentProps> = ({ data }) => {
+const DndComponent: FC<DndComponentProps> = ({ data, onDragEnd }) => {
   const [items, setItems] = useState(data);
 
   const sensors = useSensors(
@@ -47,6 +48,9 @@ const DndComponent: FC<DndComponentProps> = ({ data }) => {
       const newIndex = items.findIndex((item) => item.id === over.id);
       const updatedData = arrayMove(items, oldIndex, newIndex);
       setItems(updatedData);
+      if (onDragEnd) {
+        onDragEnd(updatedData);
+      }
     }
   }
 

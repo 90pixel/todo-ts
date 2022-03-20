@@ -4,18 +4,19 @@ import { styled } from 'stitches.config';
 import { DndComponent } from 'components';
 
 const Home: NextPage = () => {
-  const [items, setItems] = useState([
-    { id: '1', item: <div>1231</div> },
-    { id: '2', item: <div>1232</div> },
-    { id: '3', item: <div>1233</div> },
-    { id: '4', item: <div>1234</div> },
-    { id: '5', item: <div>1235</div> },
-    { id: '6', item: <div>1236</div> },
-  ]);
+  const items = [
+    { id: '1', item: 'Denenme6' },
+    { id: '2', item: 'Denenme5' },
+    { id: '3', item: 'Denenme4' },
+    { id: '4', item: 'Denenme3' },
+    { id: '5', item: 'Denenme2' },
+    { id: '6', item: 'Denenme1' },
+  ];
+
   return (
     <div>
       <CustomButton>butt on</CustomButton>
-      <DndComponent data={items} />
+      <DndComponent data={items} onDragEnd={(e) => console.log(e)} />
     </div>
   );
 };
