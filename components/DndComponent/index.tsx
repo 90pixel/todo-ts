@@ -17,12 +17,18 @@ import {
 
 import SortableItem from './SortableItem';
 
-interface DndComponentProps {
-  name?: string;
+interface SortableDataProps {
+  id: string;
+  item: React.ReactNode;
 }
 
-const DndComponent: FC<DndComponentProps> = ({ name }) => {
-  const [items, setItems] = useState(['1', '2', '3']);
+interface DndComponentProps {
+  data: SortableDataProps[];
+}
+
+const DndComponent: FC<DndComponentProps> = ({ data }) => {
+  const [items, setItems] = useState(data);
+
   const sensors = useSensors(
     useSensor(PointerSensor),
     useSensor(KeyboardSensor, {
@@ -35,10 +41,10 @@ const DndComponent: FC<DndComponentProps> = ({ name }) => {
     // active sürüklenen element, over sürüklenen elementin bırakıldığı nokta
     // eğer bırakılan nokta, dnd context dışarısında ise hata vermesini engellemek adına
     if (!over) return null;
-
+    // eğer aynı yere bırakmamışsak yer değiştirme işlenmini yapıyoruz.
     if (active.id !== over.id) {
-      const oldIndex = items.indexOf(active.id);
-      const newIndex = items.indexOf(over.id);
+      const oldIndex = items.findIndex((item) => item.id === active.id);
+      const newIndex = items.findIndex((item) => item.id === over.id);
       const updatedData = arrayMove(items, oldIndex, newIndex);
       setItems(updatedData);
     }
@@ -51,9 +57,9 @@ const DndComponent: FC<DndComponentProps> = ({ name }) => {
       onDragEnd={handleDragEnd}
     >
       <SortableContext items={items} strategy={verticalListSortingStrategy}>
-        {items.map((id) => (
-          <SortableItem key={id} id={id}>
-            {id}
+        {items.map((item) => (
+          <SortableItem key={item.id} id={item.id}>
+            {item.item}
           </SortableItem>
         ))}
       </SortableContext>
