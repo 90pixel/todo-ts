@@ -35,6 +35,8 @@ const TextareaInput = styled('textarea', {
   background: '$gray50',
   p: 16,
   resize: 'none',
+  fontWeight: '$regular',
+  fontSize: 16,
   '&:focus': {
     outline: 'none',
   },
