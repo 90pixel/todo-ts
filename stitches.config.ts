@@ -17,6 +17,7 @@ export const {
     colors: {
       avatarBg: '#C4C4C4',
       primary: '#1D2939',
+      gray800: '#1D2939',
       gray500: '#667085',
       gray400: '#98A2B3',
       gray300: '#D0D5DD',

@@ -2,6 +2,7 @@ import Textarea from 'components/Textarea';
 import type { NextPage } from 'next';
 import { styled } from 'stitches.config';
 import { DndComponent } from 'components';
+import { Text, Title } from 'components/Typography';
 
 const Home: NextPage = () => {
   const items = [
@@ -15,6 +16,8 @@ const Home: NextPage = () => {
 
   return (
     <div>
+      <Title>90Pixel ToDo</Title>
+      <Text>typography</Text>
       <CustomButton>butt on</CustomButton>
       <DndComponent
         data={items}
