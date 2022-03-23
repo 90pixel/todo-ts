@@ -16,7 +16,7 @@ export const {
   theme: {
     colors: {
       avatarBg: '#C4C4C4',
-      gray800: '#1D2939',
+      primary: '#1D2939',
       gray500: '#667085',
       gray400: '#98A2B3',
       gray300: '#D0D5DD',
@@ -76,8 +76,8 @@ export const {
       marginTop: value,
       marginBottom: value,
     }),
-    p: (value: SpaceCSSProperty) => ({
-      padding: value,
+    p: (value: number) => ({
+      padding: 4 * value,
     }),
     pt: (value: SpaceCSSProperty) => ({
       paddingTop: value,
