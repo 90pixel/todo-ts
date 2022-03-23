@@ -7,6 +7,7 @@ interface TextareaProps {
   disabled?: boolean;
   rows?: number;
   cols?: number;
+  value?: string;
 }
 
 const Textarea: FC<TextareaProps> = ({
@@ -15,6 +16,7 @@ const Textarea: FC<TextareaProps> = ({
   disabled,
   rows,
   cols,
+  value,
 }) => {
   return (
     <TextareaInput
@@ -23,6 +25,7 @@ const Textarea: FC<TextareaProps> = ({
       disabled={disabled}
       rows={rows}
       cols={cols}
+      value={value}
     />
   );
 };
