@@ -1,3 +1,4 @@
+import Textarea from 'components/Textarea';
 import type { NextPage } from 'next';
 import { styled } from 'stitches.config';
 
@@ -5,6 +6,7 @@ const Home: NextPage = () => {
   return (
     <div>
       <CustomButton>button</CustomButton>
+      <Textarea placeholder={'yasin'} />
     </div>
   );
 };

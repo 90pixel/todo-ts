@@ -30,8 +30,12 @@ const Textarea: FC<TextareaProps> = ({
 export default Textarea;
 
 const TextareaInput = styled('textarea', {
-  borderRadius: 10,
-  background: '#ddd',
-  color: '#f23123',
-  p: 10,
+  borderRadius: '$2xl',
+  color: '$gray400',
+  background: '$gray50',
+  p: 16,
+  resize: 'none',
+  '&:focus': {
+    outline: 'none',
+  },
 });
