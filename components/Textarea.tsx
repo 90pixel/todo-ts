@@ -1,13 +1,13 @@
-import React, { FC } from 'react';
+import { FC } from 'react';
 import { styled } from 'stitches.config';
 
-type TextareaProps = {
+interface TextareaProps {
   placeholder: string;
   maxLength?: number;
   disabled?: boolean;
   rows?: number;
   cols?: number;
-};
+}
 
 const Textarea: FC<TextareaProps> = ({
   placeholder,
