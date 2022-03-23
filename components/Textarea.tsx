@@ -40,4 +40,7 @@ const TextareaInput = styled('textarea', {
   '&:focus': {
     outline: 'none',
   },
+  '&::-webkit-scrollbar': {
+    display: 'none',
+  },
 });
