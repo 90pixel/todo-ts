@@ -1,9 +1,7 @@
-import { FC, ReactNode, useEffect } from 'react';
+import { FC, useEffect } from 'react';
 import { styled } from 'stitches.config';
 
 interface ModalProps {
-  // ReactNode supports multiple JSX elements, strings, integers, fragments, and portals.
-  children: ReactNode;
   isOpen?: boolean;
 }
 
