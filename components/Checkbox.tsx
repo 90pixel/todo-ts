@@ -39,18 +39,18 @@ const checkboxCheck = keyframes({
     width: '0',
     height: '0',
     borderColor: '#212121', // TODO: It should be color token
-    transform: 'translate3d(0,0,0) rotate(45deg)',
+    transform: 'translate3d(0,0,0) rotate(35deg)',
   },
   '33%': {
     width: '.3em',
     height: '0',
-    transform: 'translate3d(0,0,0) rotate(45deg)',
+    transform: 'translate3d(0,0,0) rotate(35deg)',
   },
   '100%': {
     width: '.3em',
     height: '.6em',
     borderColor: '#212121', // TODO: It should be color token
-    transform: 'translate3d(0,-.6em,0) rotate(45deg)',
+    transform: 'translate3d(0,-.6em,0) rotate(35deg)',
   },
 });
 
@@ -80,7 +80,7 @@ const Check = styled('span', {
           left: '.3em',
           borderRight: '3px solid transparent',
           borderBottom: '3px solid transparent',
-          transform: 'rotate(45deg)',
+          transform: 'rotate(35deg)',
           transformOrigin: '0% 100%',
           animation: `${checkboxCheck} 125ms 250ms cubic-bezier(.4,.0,.23,1) forwards`,
         },
