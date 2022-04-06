@@ -26,6 +26,7 @@ export const {
     },
     shadows: {
       // primary: '0px 0px 32px 0px rgba(143, 164, 189, 0.24)',
+      md: '0px 4px 8px -2px rgba(16, 24, 40, 0.1), 0px 2px 4px -2px rgba(16, 24, 40, 0.06);',
     },
     radii: {
       sm: '2px',
