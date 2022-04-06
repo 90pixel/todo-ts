@@ -30,7 +30,7 @@ const ModalContainer = styled('div', {
   height: '100vh',
 
   '&::after': {
-    content: '""',
+    content: '',
     position: 'absolute',
     inset: 0,
     backgroundColor: 'rgba(0, 0, 0, 0.5)',
@@ -46,7 +46,7 @@ const ModalContent = styled('div', {
   flexDirection: 'column',
   placeItems: 'center',
   gap: '1em',
-  maxWidth: '23.275rem',
+  maxWidth: '372px',
   bgColor: '$gray100',
   px: '0.5em',
   py: '0.75em',
