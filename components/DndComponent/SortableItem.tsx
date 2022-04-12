@@ -20,6 +20,8 @@ const SortableItem: FC<SortableItemProps> = ({
     transform: CSS.Transform.toString(transform),
     transition,
     display: 'flex',
+    alignItems: 'center',
+    margin: '10px 0',
   };
 
   return (
