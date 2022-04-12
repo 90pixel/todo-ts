@@ -8,7 +8,7 @@ interface LayoutProps {
 }
 
 const Layout: FC<LayoutProps> = ({
-  title = '90Pixel To Do',
+  title = '90 Pixel To Do',
   children,
   className,
 }) => {
