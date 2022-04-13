@@ -3,15 +3,11 @@ import Head from 'next/head';
 import { styled } from 'stitches.config';
 
 interface LayoutProps {
-  title: string;
+  title?: string;
   className?: string;
 }
 
-const Layout: FC<LayoutProps> = ({
-  title = '90 Pixel To Do',
-  children,
-  className,
-}) => {
+const Layout: FC<LayoutProps> = ({ title, children, className }) => {
   return (
     <>
       <Head>

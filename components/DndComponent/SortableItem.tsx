@@ -25,8 +25,8 @@ const SortableItem: FC<SortableItemProps> = ({
   };
 
   return (
-    <div ref={setNodeRef} style={style} {...attributes} {...listeners}>
-      <DragElement {...attributes} {...listeners}>
+    <div style={style}>
+      <DragElement ref={setNodeRef} {...attributes} {...listeners}>
         {customDragIcon ? customDragIcon : '::'}
       </DragElement>
       {children}

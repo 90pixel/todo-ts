@@ -7,10 +7,10 @@ const DndItems = () => {
       id: '1',
       item: (
         <TodoItem
-          todo={'deneme'}
+          todo="deneme"
           done={done}
           setDone={() => setDone((p) => !p)}
-          description={'deneme açıklaması'}
+          description="deneme açıklaması"
         />
       ),
     },
@@ -18,7 +18,7 @@ const DndItems = () => {
       id: '2',
       item: (
         <TodoItem
-          todo={'deneme'}
+          todo="deneme"
           done={true}
           setDone={(e) => {
             console.log(e);
@@ -30,7 +30,7 @@ const DndItems = () => {
       id: '3',
       item: (
         <TodoItem
-          todo={'deneme'}
+          todo="deneme"
           done={true}
           setDone={(e) => {
             console.log(e);
@@ -42,7 +42,7 @@ const DndItems = () => {
       id: '4',
       item: (
         <TodoItem
-          todo={'deneme'}
+          todo="deneme"
           done={true}
           setDone={(e) => {
             console.log(e);
@@ -54,7 +54,7 @@ const DndItems = () => {
       id: '5',
       item: (
         <TodoItem
-          todo={'deneme'}
+          todo="deneme"
           done={true}
           setDone={(e) => {
             console.log(e);
@@ -66,7 +66,7 @@ const DndItems = () => {
       id: '6',
       item: (
         <TodoItem
-          todo={'deneme'}
+          todo="deneme"
           done={true}
           setDone={(e) => {
             console.log(e);
