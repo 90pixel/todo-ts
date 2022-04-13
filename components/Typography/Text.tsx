@@ -5,8 +5,10 @@ interface TextProps {
   variant?: 'description' | 'ghost';
 }
 
-const Text: FC<TextProps> = ({ children, variant }) => (
-  <StyledText type={variant}>{children}</StyledText>
+const Text: FC<TextProps> = ({ children, variant, ...props }) => (
+  <StyledText type={variant} {...props}>
+    {children}
+  </StyledText>
 );
 
 const StyledText = styled('span', {
