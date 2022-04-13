@@ -1,11 +1,11 @@
 import { FC } from 'react';
 import { styled } from 'stitches.config';
 
-interface I_Props {
+interface TextProps {
   variant?: 'description' | 'ghost';
 }
 
-const Text: FC<I_Props> = ({ children, variant }) => (
+const Text: FC<TextProps> = ({ children, variant }) => (
   <StyledText type={variant}>{children}</StyledText>
 );
 
