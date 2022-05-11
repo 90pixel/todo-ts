@@ -20,11 +20,13 @@ const SortableItem: FC<SortableItemProps> = ({
     transform: CSS.Transform.toString(transform),
     transition,
     display: 'flex',
+    alignItems: 'center',
+    margin: '10px 0',
   };
 
   return (
-    <div ref={setNodeRef} style={style} {...attributes} {...listeners}>
-      <DragElement {...attributes} {...listeners}>
+    <div style={style}>
+      <DragElement ref={setNodeRef} {...attributes} {...listeners}>
         {customDragIcon ? customDragIcon : '::'}
       </DragElement>
       {children}

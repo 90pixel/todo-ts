@@ -30,6 +30,10 @@ module.exports = {
     'react/self-closing-comp': 'error',
     'no-undef': 'error',
     'prettier/prettier': 'error',
+    "react/jsx-curly-brace-presence": [
+      "error",
+      { "props": "never", "children": "never" }
+    ]
   },
   ignorePatterns: ['.eslintrc.js'],
   overrides: [

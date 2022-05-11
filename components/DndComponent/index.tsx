@@ -7,6 +7,7 @@ import {
   useSensor,
   useSensors,
   DragEndEvent,
+  TouchSensor,
 } from '@dnd-kit/core';
 import {
   arrayMove,
@@ -14,7 +15,10 @@ import {
   sortableKeyboardCoordinates,
   verticalListSortingStrategy,
 } from '@dnd-kit/sortable';
-
+import {
+  restrictToVerticalAxis,
+  restrictToWindowEdges,
+} from '@dnd-kit/modifiers';
 import SortableItem from './SortableItem';
 
 interface SortableDataProps {
@@ -36,9 +40,19 @@ const DndComponent: FC<DndComponentProps> = ({
   const [items, setItems] = useState(data);
 
   const sensors = useSensors(
-    useSensor(PointerSensor),
+    useSensor(PointerSensor, {
+      activationConstraint: {
+        distance: { y: 15 },
+      },
+    }),
     useSensor(KeyboardSensor, {
       coordinateGetter: sortableKeyboardCoordinates,
+    }),
+    useSensor(TouchSensor, {
+      // Press delay of 250ms, with tolerance of 5px of movement
+      activationConstraint: {
+        distance: { y: 15 },
+      },
     })
   );
 
@@ -64,6 +78,8 @@ const DndComponent: FC<DndComponentProps> = ({
       sensors={sensors}
       collisionDetection={closestCenter}
       onDragEnd={handleDragEnd}
+      //axis={Axis.Vertical}
+      modifiers={[restrictToVerticalAxis, restrictToWindowEdges]}
     >
       <SortableContext items={items} strategy={verticalListSortingStrategy}>
         {items.map((item) => (
