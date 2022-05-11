@@ -18,6 +18,7 @@ export const {
       bg: '#E5E5E5',
       avatarBg: '#C4C4C4',
       primary: '#1D2939',
+      gray800: '#1D2939',
       gray500: '#667085',
       gray400: '#98A2B3',
       gray300: '#D0D5DD',
@@ -28,6 +29,7 @@ export const {
     shadows: {
       // primary: '0px 0px 32px 0px rgba(143, 164, 189, 0.24)',
       md: '0px 4px 8px -2px rgba(16, 24, 40, 0.1), 0px 2px 4px -2px rgba(16, 24, 40, 0.06);',
+      lg: '0px 8px 60px -4px rgba(16, 24, 40, 0.1), 0px 4px 8px -2px rgba(16, 24, 40, 0.06);',
     },
     radii: {
       sm: '2px',
@@ -44,6 +46,13 @@ export const {
       regular: 400,
       medium: 500,
       bold: 700,
+    },
+    space: {
+      0: '4px',
+      1: '8px',
+      2: '16px',
+      3: '24px',
+      4: '32px',
     },
   },
   media: {
