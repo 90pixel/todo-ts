@@ -12,6 +12,7 @@ const Title: FC<TitleProps> = ({ children, level = 1, ...props }) => (
 );
 
 const StyledTitle = styled('h1', {
+  fontSize: 28,
   color: '$gray800',
   fontWeight: '$bold',
 });
