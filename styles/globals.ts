@@ -9,6 +9,7 @@ export const globalStyles = globalCss({
   },
   'html,body': {
     background: '$gray50',
+    minHeight: '100vh',
   },
   button: {
     background: 'none',
