@@ -1,13 +1,7 @@
 import type { NextPage } from 'next';
-import { DndComponent } from 'components';
-import { DndItems } from 'data';
+import { Dashboard } from 'modules';
 
 const Home: NextPage = () => {
-  const items = DndItems();
-  return (
-    <div>
-      <DndComponent data={items} onDragEnd={(e) => console.log(e)} />
-    </div>
-  );
+  return <Dashboard />;
 };
 export default Home;

@@ -1,9 +1,17 @@
 import { FC } from 'react';
+import Head from 'next/head';
 import { styled } from 'stitches.config';
 
-const Layout: FC = ({ children }) => {
+interface LayoutProps {
+  title: string;
+}
+
+const Layout: FC<LayoutProps> = ({ title, children }) => {
   return (
     <Main>
+      <Head>
+        <title>{title}</title>
+      </Head>
       <Container>{children}</Container>
     </Main>
   );
