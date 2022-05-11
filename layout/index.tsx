@@ -29,5 +29,6 @@ const Main = styled('main', {
 const Container = styled('div', {
   width: 500,
   height: 800,
+  padding: '$sp84',
   boxShadow: '$lg',
 });
