@@ -48,11 +48,12 @@ export const {
       bold: 700,
     },
     space: {
-      0: '4px',
-      1: '8px',
-      2: '16px',
-      3: '24px',
-      4: '32px',
+      sp4: '4px',
+      sp8: '8px',
+      sp12: '12px',
+      sp24: '24px',
+      sp32: '32px',
+      sp84: '84px',
     },
   },
   media: {
