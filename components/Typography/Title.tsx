@@ -3,6 +3,7 @@ import { styled } from 'stitches.config';
 
 interface TitleProps {
   level?: 1 | 2 | 3 | 4 | 5 | 6;
+  contentEditable?: boolean;
 }
 
 const Title: FC<TitleProps> = ({ children, level = 1, ...props }) => (

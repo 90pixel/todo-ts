@@ -3,6 +3,7 @@ import { styled } from 'stitches.config';
 
 interface TextProps {
   variant?: 'description' | 'ghost';
+  contentEditable?: boolean;
 }
 
 const Text: FC<TextProps> = ({ children, variant, ...props }) => (
