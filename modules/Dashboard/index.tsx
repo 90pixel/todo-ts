@@ -1,18 +1,25 @@
-import { FC } from 'react';
-import { DndComponent, Text, Title } from 'components';
+import { FC, useState } from 'react';
+import { Button, DndComponent, Text, Title } from 'components';
 import { DndItems } from 'data';
 import { styled } from 'stitches.config';
 
 const Dashboard: FC = () => {
   const items = DndItems();
+
+  const [editable, setEditable] = useState(false);
+
   return (
     <>
       <Header>
-        <StyledTitle>Booking Movie Tickets</StyledTitle>
+        <StyledTitle contentEditable={editable}>
+          Booking Movie Tickets
+        </StyledTitle>
 
         <Actions>
-          <Text variant="ghost">Edit</Text>
-          <Text variant="ghost">Remove</Text>
+          <Button variant="ghost" onClick={() => setEditable(!editable)}>
+            {editable ? 'Save' : 'Edit'}
+          </Button>
+          <Button variant="ghost">Remove</Button>
         </Actions>
       </Header>
 
