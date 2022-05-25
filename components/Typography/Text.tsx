@@ -4,6 +4,7 @@ import { styled } from 'stitches.config';
 interface TextProps {
   variant?: 'description' | 'ghost';
   contentEditable?: boolean;
+  as?: React.ReactNode;
 }
 
 const Text: FC<TextProps> = ({ children, variant, ...props }) => (
@@ -16,6 +17,7 @@ const StyledText = styled('span', {
   fontSize: 18,
   fontWeight: '$regular',
   color: '$gray800',
+  lineBreak: 'anywhere',
 
   variants: {
     type: {

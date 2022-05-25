@@ -1,13 +1,15 @@
 import { FC, ReactNode, Dispatch, SetStateAction } from 'react';
 import { styled } from 'stitches.config';
-import Collapse from './Collapse';
+
 import Checkbox from './Checkbox';
+import { Text } from './Typography';
 
 interface TodoItemProps {
   done: boolean;
   setDone: Dispatch<SetStateAction<boolean>>;
   todo: string;
   description?: ReactNode;
+  isEditable: boolean;
 }
 
 const TodoItem: FC<TodoItemProps> = ({
@@ -15,13 +17,20 @@ const TodoItem: FC<TodoItemProps> = ({
   setDone,
   todo,
   description,
+  isEditable,
 }) => {
   return (
     <Todo>
       <Checkbox checked={done} onChange={setDone} />
-      <Collapse header={<CollapseHeader>{todo}</CollapseHeader>}>
-        {description}
-      </Collapse>
+
+      <CollapseHeader>
+        <Text contentEditable={isEditable} as="p">
+          {todo}
+        </Text>
+        <Description contentEditable={isEditable} as="span">
+          {description}
+        </Description>
+      </CollapseHeader>
     </Todo>
   );
 };
@@ -34,8 +43,13 @@ const Todo = styled('div', {
   border: '1px solid $gray200',
   p: 1,
   borderRadius: '$3xl',
+  width: '100%',
 });
 
 const CollapseHeader = styled('div', {
   margin: '0.6em 0',
+});
+
+const Description = styled(Text, {
+  fontSize: '$sm',
 });
