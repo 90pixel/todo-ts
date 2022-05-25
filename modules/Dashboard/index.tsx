@@ -4,9 +4,8 @@ import { DndItems } from 'data';
 import { styled } from 'stitches.config';
 
 const Dashboard: FC = () => {
-  const items = DndItems();
-
   const [editable, setEditable] = useState(false);
+  const items = DndItems({ editable });
 
   return (
     <>
@@ -25,6 +24,7 @@ const Dashboard: FC = () => {
 
       <Tasks>
         <Text variant="ghost">Tasks</Text>
+        {/* DND Component, elementleri data içinde değil childrne olarak alsın */}
         <DndComponent data={items} onDragEnd={(e) => console.log(e)} />
       </Tasks>
     </>

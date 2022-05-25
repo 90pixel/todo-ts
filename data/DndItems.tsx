@@ -1,7 +1,13 @@
-import { TodoItem } from 'components';
 import { useState } from 'react';
-const DndItems = () => {
+import { TodoItem } from 'components';
+
+interface DndItemProps {
+  editable: boolean;
+}
+
+const DndItems = ({ editable }: DndItemProps) => {
   const [done, setDone] = useState<boolean>(false);
+
   const items = [
     {
       id: '1',
@@ -11,6 +17,7 @@ const DndItems = () => {
           done={done}
           setDone={() => setDone((p) => !p)}
           description="deneme açıklaması"
+          isEditable={editable}
         />
       ),
     },
@@ -23,6 +30,7 @@ const DndItems = () => {
           setDone={(e) => {
             console.log(e);
           }}
+          isEditable={editable}
         />
       ),
     },
@@ -35,6 +43,7 @@ const DndItems = () => {
           setDone={(e) => {
             console.log(e);
           }}
+          isEditable={editable}
         />
       ),
     },
@@ -47,6 +56,7 @@ const DndItems = () => {
           setDone={(e) => {
             console.log(e);
           }}
+          isEditable={editable}
         />
       ),
     },
@@ -59,6 +69,7 @@ const DndItems = () => {
           setDone={(e) => {
             console.log(e);
           }}
+          isEditable={editable}
         />
       ),
     },
